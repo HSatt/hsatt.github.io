@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -7,15 +7,17 @@ body {
 }
 
 header {
-    background-color: #007BFF;
+    background-color: #191919;
     color: white;
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center; /* Center navigation links */
 }
 
 nav ul li {
@@ -26,14 +28,22 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px; /* Thicker underline for emphasis */
+    color: #00BFFF; /* Blue color for hover effect */
 }
 
 section {
     padding: 2rem;
-    margin: 1rem;
+    margin: 2rem auto;
+    max-width: 800px; /* Center content with a max width */
     background: white;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for sections */
 }
 
 footer {
@@ -41,4 +51,50 @@ footer {
     padding: 1rem;
     background-color: #333;
     color: white;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive design for navigation */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+.twitter-button {
+    display: inline-flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    padding: 0.5rem 1rem;
+    background-color: #101010;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.twitter-button img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem; /* Space between the icon and text */
+}
+
+.twitter-button:hover {
+    background-color: #1DA1F2; /* Twitter blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
